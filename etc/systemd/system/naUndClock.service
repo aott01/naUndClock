@@ -1,0 +1,18 @@
+[Unit]
+Description=Na Und Clock
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+ExecStart=/usr/bin/env TZ=PST8PDT python /home/pi/clock/Adafruit_Python_LED_Backpack/examples/ex_7segment_clock.py
+
+[Install]
+WantedBy=multi-user.target
+
+# systemctl enable naUndClock
+# systemctl start naUndClock
+# systemctl status -l naUndClock
