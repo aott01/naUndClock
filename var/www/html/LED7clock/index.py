@@ -115,8 +115,7 @@ at
 </select>
  hours.
 <br>
-The preset values are suggestions for Pacific, Mountain, Central or Eastern timezone. If you select UTC you
-+need to compensate for the time offset yourself or maybe select the same brightness for both times.
+The preset values are suggestions for Pacific, Mountain, Central or Eastern timezone. If you select UTC you need to compensate for the time offset yourself or maybe select the same brightness for both times.
 <br>
 <input type="submit" value="Submit"/>
 </form>
