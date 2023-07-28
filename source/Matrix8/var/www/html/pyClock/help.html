@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel='stylesheet' id='dark-css'  href="./style.css" type="text/css" media="all" />
+<title>pyClock Help page</title>
+</head>
+<body>
+
+<H2>pyClock Help page</H2>
+
+<P>On power-on or reboot, the system clock process will display the URL of the control page, the time zone and if NTP is sync'ed.</P>
+
+<P>The Daylight Savings Time adjustment is handled automatically for your timezone selection by the operating system if you observe DST.</P>
+
+<P>As time is monotonously increasing, this clock's display brightness algorithm assumes that the second selected time is after the first one. The original values are suggestions for continental US timezones Pacific, Mountain, Central or Eastern (display turns bright at 7am and dims at 9pm). The clock will turn to higher brightness (value 64) during daytime hours and then set itself to dark mode (value 2) in the evening. If you run in UTC timezone you need to select the change times yourself to adjust for daylight hours at your location, the clock brightness algorithm will handle the 00:00 rollover.</P>
+
+<P>Other options: Use higher brightness during the night by selecting the second value higher than the first one. Or set both hour pulldowns to the same value to run clock at same brightness (clock will only honor the second brightness value in this case).</P>
+
+<P>If you just change the times at which the brightness adjusts, or just the brightness values, the clock control will signal to the running process to pick up the new values right away. If you change the timezone, the clock system service has to restart to make that change (equivalent to power-on).</P>
+
+<P>Back to the <A HREF="/pyClock/">clock settings</A>
+
+</body>
+</html>
