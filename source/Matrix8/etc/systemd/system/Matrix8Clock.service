@@ -1,0 +1,15 @@
+[Unit]
+Description=Matrix8Clock
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+ExecStart=/usr/bin/env python3 /home/pi/matrix8clock.py
+ExecStopPost=/usr/bin/python3 /home/pi/matrix8off.py
+
+[Install]
+WantedBy=multi-user.target
