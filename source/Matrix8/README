@@ -1,0 +1,30 @@
+source files as-is running on the (4) 8x8 LED Max7219 R-Pi_0
+
+Notes: clock runs from systemd service, using the matrix8clock.py and matrix8off.py scripts; web interface 
+       is minimally implemented, updates .ini config file; sudoers to allow some nopasswd system calls;
+       favicon is the gree snake 🐍 emoji
+
+- depends on apache2, package specific config file and 'a2enconf pyClock'
+- depends on MAX7219, luma.*
+# pip3 list (old versions from install time in 2019)
+...
+max7219 (0.2.3) -> Requires: spidev
+luma.core (1.8.3) -> Requires: pillow, smbus2, RPI.GPIO, spidev
+luma.led-matrix (1.1.1)
+...
+- mkdir /var/lib/pyClock/ && chown pi:www-data  # apache uid
+
+Backup
+- # tar -tvf all-clock-files-backup-20230728.tar
+-rwxr-xr-x pi/pi           587 2019-07-09 00:04 home/pi/matrix8off.py
+-rwxr-xr-x pi/pi          5973 2023-07-28 05:53 home/pi/matrix8clock.py
+-rw-rw-r-- pi/www-data      91 2023-07-28 06:03 var/lib/pyClock/pyClock.ini
+-rw-r--r-- root/root      1910 2019-07-09 00:08 var/www/html/pyClock/help.html
+-rwxr-xr-x root/root      3224 2019-07-07 19:39 var/www/html/pyClock/index.py
+-rw-r--r-- root/root       431 2019-06-24 18:31 var/www/html/pyClock/style.css
+-rwxr-xr-x root/root      2766 2019-07-09 00:12 var/www/html/pyClock/submit.py
+-rw-r--r-- root/root      1406 2016-08-04 00:26 var/www/html/favicon.ico
+-rw-r--r-- root/root       283 2019-06-21 01:17 etc/systemd/system/Matrix8Clock.service
+-r--r----- root/root       115 2019-07-01 23:43 etc/sudoers.d/010_www-data_Matrix8Clock
+-rw-r--r-- root/root       162 2019-03-08 23:59 etc/apache2/conf-available/pyClock.conf
+lrwxrwxrwx root/root         0 2019-03-09 00:12 etc/apache2/conf-enabled/pyClock.conf -> ../conf-available/pyClock.conf
