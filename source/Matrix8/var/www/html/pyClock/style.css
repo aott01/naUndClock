@@ -1,0 +1,13 @@
+html, body { background: #000000;
+        color: #FFFFFF; }
+H2 {background: #000000;
+        color: #FFFFFF;
+        font-family: Arial,Helvetica,Sans-serif; }
+form, P, p { background: #000000;
+        color: #FFFFFF; 
+        font-family: arial,helvetica,sans-serif;
+        text-align: left; }
+.rederror { background: #000000;
+        color: #FF0000; 
+        font-family: arial,helvetica,sans-serif;
+        text-align: left; }
