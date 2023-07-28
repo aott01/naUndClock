@@ -2,7 +2,7 @@ source files as-is running on the (4) 8x8 LED Max7219 R-Pi_0
 
 Notes: clock runs from systemd service, using the matrix8clock.py and matrix8off.py scripts; web interface 
        is minimally implemented, updates .ini config file; sudoers to allow some nopasswd system calls;
-       favicon is the gree snake 🐍 emoji
+       favicon is the green snake 🐍 emoji
 
 - depends on apache2, package specific config file and 'a2enconf pyClock'
 - depends on MAX7219, luma.*
