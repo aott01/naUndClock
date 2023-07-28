@@ -4,6 +4,7 @@ Notes: clock runs from systemd service, using the matrix8clock.py and matrix8off
        is minimally implemented, updates .ini config file; sudoers to allow some nopasswd system calls;
        favicon is the green snake 🐍 emoji
 
+- remember to enable SPI devices kernel module loading in raspi-config (5 Interfacing Options)
 - depends on apache2, package specific config file and 'a2enconf pyClock'
 - depends on MAX7219, luma.*
 # pip3 list (old versions from install time in 2019)
@@ -17,7 +18,7 @@ luma.led-matrix (1.1.1)
 Backup
 - # tar -tvf all-clock-files-backup-20230728.tar
 -rwxr-xr-x pi/pi           587 2019-07-09 00:04 home/pi/matrix8off.py
--rwxr-xr-x pi/pi          5973 2023-07-28 05:53 home/pi/matrix8clock.py
+-rwxr-xr-x pi/pi          5781 2023-07-28 18:56 home/pi/matrix8clock.py
 -rw-rw-r-- pi/www-data      91 2023-07-28 06:03 var/lib/pyClock/pyClock.ini
 -rw-r--r-- root/root      1910 2019-07-09 00:08 var/www/html/pyClock/help.html
 -rwxr-xr-x root/root      3224 2019-07-07 19:39 var/www/html/pyClock/index.py
