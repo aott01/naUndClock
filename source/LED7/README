@@ -1,1 +1,23 @@
 source files as-is running on the 7-segment LED R-Pi_0
+
+Note: currently clock runs from systemd service, using the LED7clock.py and LED7off.py scripts; the web interface is not implemented; sudoers to allow nopasswd
+
+- depends on "Adafruit_Python_LED_Backpack" checked out via git from...
+  Author: Limor "Ladyada" Fried <limor@ladyada.net>
+  Date:   Tue Sep 11 08:53:54 2018 -0700
+# cd Adafruit_Python_LED_Backpack
+# python3 setup.py install
+
+- also... apt-get install python3-smbus python3-imaging python3-pil
+
+Backup
+- # tar -tvf all-LED7clock-files-backup.tar 
+-rw-r--r-- pi/pi           785 2019-07-11 14:05 home/pi/LED7off.py
+-rw-r--r-- pi/pi          1451 2020-03-16 15:55 home/pi/LED7clock.py
+-rwxr-xr-x root/root      3692 2019-03-27 06:20 var/www/html/LED7clock/index.py
+-rw-r--r-- root/root       296 2019-03-27 06:10 var/www/html/LED7clock/style.css
+-rwxr-xr-x root/root      1375 2020-03-16 15:54 var/www/html/LED7clock/submit.py
+-rw-r--r-- root/root       289 2019-03-27 05:14 etc/systemd/system/LED7clock.service
+-r--r----- root/root        27 2016-10-18 16:19 etc/sudoers.d/010_pi-nopasswd
+-rw-r--r-- pi/pi           242 2020-05-21 16:12 home/pi/LED7clock-README
+-rw-r--r-- root/root      8803 2019-03-25 16:22 home/pi/install-results-Adafruit.txt
